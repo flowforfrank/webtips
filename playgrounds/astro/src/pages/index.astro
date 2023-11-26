@@ -1,5 +1,5 @@
 ---
-
+import '../css/resets.css'
 ---
 
 <html lang="en">
@@ -10,6 +10,19 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro Playground</h1>
+		<main>
+			<h1>Astro Playground</h1>
+			<button>Count: 0</button>
+		</main>
 	</body>
 </html>
+
+<script>
+	const button = document.querySelector('button') as HTMLButtonElement
+	let count = 0
+
+	button.addEventListener('click', () => {
+		count++
+		button.innerText = `Count: ${count}`
+	})
+</script>

@@ -1,7 +1,16 @@
+import { useState } from 'react'
+
 const App = () => {
-  return (
-    <h1>React Playground</h1>
-  )
+    const [count, setCount] = useState(0)
+
+    return (
+        <main>
+            <h1>React Playground</h1>
+            <button onClick={() => setCount(count + 1)}>
+                Count: {count}
+            </button>
+        </main>
+    )
 }
 
 export default App
